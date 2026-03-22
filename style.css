@@ -77,6 +77,7 @@ h1, h2, h3, .logo {
     z-index: -1;
     overflow: hidden;
     pointer-events: none;
+    background-color: var(--bg-dark); /* Ensure base background is dark */
 }
 
 #canvas-dots {
@@ -90,35 +91,35 @@ h1, h2, h3, .logo {
 .gradient-sphere {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
+    filter: blur(120px); /* Increased blur for more "blurred designs" look */
+    opacity: 0.8; /* Increased opacity from 0.6 for better visibility */
     z-index: -1;
-    animation: float 20s infinite alternate;
+    animation: float 25s infinite alternate; /* Slower, more subtle float */
 }
 
 .sphere-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-blue);
-    top: -100px;
-    right: -100px;
+    width: 800px; /* Increased from 600px */
+    height: 800px;
+    background: radial-gradient(circle, var(--accent-blue), transparent); /* Use gradient for softer edges */
+    top: -200px;
+    right: -200px;
 }
 
 .sphere-2 {
-    width: 500px;
-    height: 500px;
-    background: var(--accent-purple);
-    bottom: -150px;
-    left: -150px;
+    width: 900px; /* Increased from 700px */
+    height: 900px;
+    background: radial-gradient(circle, var(--accent-purple), transparent);
+    bottom: -300px;
+    left: -300px;
 }
 
 .sphere-3 {
-    width: 300px;
-    height: 300px;
-    background: var(--accent-cyan);
+    width: 600px; /* Increased from 500px */
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-cyan), transparent);
     top: 40%;
-    left: 20%;
-    animation-delay: -5s;
+    left: 15%;
+    animation-delay: -7s;
 }
 
 @keyframes float {

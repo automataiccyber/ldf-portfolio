@@ -388,24 +388,33 @@ style.textContent = `
         right: 0px;
         height: 100vh;
         top: 0;
-        background: var(--bg-dark);
-        width: 70%;
+        background: rgba(10, 11, 30, 0.98);
+        backdrop-filter: blur(20px);
+        width: 25%; /* Cater 25% of the horizontal screen as requested */
+        min-width: 200px; /* Reduced min-width to accommodate 25% better on small screens */
         align-items: center;
         justify-content: center;
-        z-index: 999;
+        z-index: 1000;
         box-shadow: -10px 0 30px rgba(0,0,0,0.5);
         border-left: 1px solid var(--glass-border);
     }
 
-    .burger { display: none; cursor: pointer; }
-    .burger div { width: 25px; height: 3px; background-color: var(--text-light); margin: 5px; transition: all 0.3s ease; }
+    .burger { 
+        display: none; 
+        cursor: pointer; 
+        z-index: 1100; /* Ensure burger is above the open navigation */
+        position: fixed; /* Changed to fixed to keep it in place when scrolling while menu is open */
+        right: 2rem;
+        top: 1.8rem;
+    }
+    .burger div { width: 25px; height: 3px; background-color: var(--accent-cyan); margin: 5px; transition: all 0.3s ease; }
 
     @media screen and (max-width: 768px) {
         .burger { display: block; }
     }
 
-    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); background-color: var(--accent-cyan); }
     .toggle .line2 { opacity: 0; }
-    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); background-color: var(--accent-cyan); }
 `;
 document.head.appendChild(style);
