@@ -5,8 +5,8 @@
     --accent-cyan: #00f2fe;
     --text-light: #f8f9fa;
     --text-dim: #b0b0b0;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05); /* Slightly more visible glass effect */
+    --glass-border: rgba(255, 255, 255, 0.15); /* More prominent borders */
     --neon-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
     --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: 0.3s ease;
@@ -74,10 +74,9 @@ h1, h2, h3, .logo {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Keep background behind everything */
     overflow: hidden;
     pointer-events: none;
-    background-color: var(--bg-dark); /* Ensure base background is dark */
 }
 
 #canvas-dots {
@@ -93,7 +92,7 @@ h1, h2, h3, .logo {
     border-radius: 50%;
     filter: blur(120px); /* Increased blur for more "blurred designs" look */
     opacity: 0.8; /* Increased opacity from 0.6 for better visibility */
-    z-index: -1;
+    /* Removed z-index to stay visible over bg-container background */
     animation: float 25s infinite alternate; /* Slower, more subtle float */
 }
 
@@ -134,8 +133,9 @@ h1, h2, h3, .logo {
     width: 100%;
     padding: 1.5rem 0;
     z-index: 1000;
-    background: rgba(10, 11, 30, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 11, 30, 0.7); /* Reduced opacity for better glass effect */
+    backdrop-filter: blur(15px); /* Stronger blur for glassmorphism */
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */
     border-bottom: 1px solid var(--glass-border);
     transition: var(--transition-fast);
 }
@@ -270,10 +270,11 @@ h1, h2, h3, .logo {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03); /* Added slight transparency */
     color: var(--text-light);
     border: 1px solid var(--glass-border);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
@@ -343,7 +344,8 @@ h1, h2, h3, .logo {
 /* --- Glass Card --- */
 .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 2rem;
@@ -770,7 +772,8 @@ h1, h2, h3, .logo {
     width: 50px;
     height: 50px;
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     color: var(--accent-cyan);
     border-radius: 50%;
@@ -812,8 +815,9 @@ h1, h2, h3, .logo {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(10, 11, 30, 0.9);
-    backdrop-filter: blur(15px);
+    background-color: rgba(10, 11, 30, 0.85); /* Slightly less opaque for better glass effect */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     transition: opacity 0.3s ease;
 }
 
