@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liel Darren F. Fajutagana | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Background -->
+    <div class="bg-container">
+        <div id="canvas-dots"></div>
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">LD<span>F</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certs">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="reveal-text">Hello, I'm</h2>
+                    <h1 class="glitch-text" data-text="Liel Darren F. Fajutagana">Liel Darren F. Fajutagana</h1>
+                    <div class="typing-container">
+                        <span class="typing-text"></span>
+                    </div>
+                    <p class="hero-tagline">Specializing in Mobile App & Web Development, IoT, Networking, Cybersecurity, AI, and Data Analysis. Building secure, intelligent, and interconnected digital solutions.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <div class="mouse"></div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass-card">
+                        <p>I am a student specializing in <strong>Mobile App and Web Development</strong> at <strong>STI College Lipa</strong>. I have a passion for creating high-performance applications and websites that combine sleek design with robust functionality.</p>
+                        <p>My expertise extends into the world of <strong>Internet of Things (IoT)</strong>, where I design and build smart hardware solutions like automated health gates and interactive display systems. I enjoy the challenge of integrating physical sensors and microcontrollers with cloud-based software to create seamless, real-world experiences.</p>
+                        <p>Beyond development, I have a strong foundation in <strong>Networking and Cybersecurity</strong>, backed by numerous certifications in network troubleshooting, endpoint security, and ethical hacking. I bridge the gap between complex backend logic, secure infrastructure, and engaging frontend interfaces.</p>
+                        <p>With 3 years of experience in HTML/CSS and 2 years in both Java and JavaScript, I focus on building secure, scalable, and user-centric digital solutions.</p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="label">Specialization</span>
+                                <span class="value">IT in Mobile App and Web Development</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Institution</span>
+                                <span class="value">STI College Lipa</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Focus Areas</span>
+                                <span class="value">Development, Security & Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Projects</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                    <button class="filter-btn" data-filter="hardware">Hardware</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Web Software Projects (Vercel Links) -->
+                    <div class="project-card glass-card reveal" data-category="software">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/automataiccyber/flexi-kiosk.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                                    <a href="https://flexi-kiosk.vercel.app/" target="_blank" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Flexi Kiosk"
+                                       data-image="project/flexi-kiosk.png"
+                                       data-desc="A comprehensive web-based kiosk solution for educational environments with real-time updates and voice interaction."
+                                       data-details="Advanced Voice Commands for hands-free navigation;Real-time Announcements with priority pinning;Interactive School Calendar and Facility Tracking;ESP32 Integration for motion-activated power management;"
+                                       data-tags="JavaScript,Firebase,Web Speech API,IoT"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/flexi-kiosk.png" alt="Flexi Kiosk">
+                        </div>
+                        <div class="project-info">
+                            <h3>Flexi Kiosk</h3>
+                            <p>Voice-powered kiosk solution for school information management featuring real-time announcements and hardware integration.</p>
+                            <div class="tags">
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>Web Speech API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card reveal" data-category="software">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/automataiccyber/q-now-web-app-expo.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                                    <a href="https://q-now-web-app-expo-final.vercel.app/" target="_blank" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Q-Now Web App"
+                                       data-image="project/q-now-web-app.png"
+                                       data-desc="An administrative dashboard for real-time queue lifecycle management in healthcare and service-oriented environments."
+                                       data-details="Live Queue Monitoring (Waiting, In Service, Completed);Instant Push Notifications via Firebase Firestore;RFID/PIN Verification support via ESP32 hardware;Comprehensive Establishment and Counter management;"
+                                       data-tags="JavaScript,Firebase,IoT,Admin Dashboard"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/q-now-web-app.png" alt="Q-Now Web App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Q-Now Web App</h3>
+                            <p>Queue-powered management solution for service-oriented environments with real-time tracking and patient notifications.</p>
+                            <div class="tags">
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>Web App</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card reveal" data-category="software">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/automataiccyber/rational-function-hubs.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                                    <a href="https://rational-function-hubs.vercel.app/" target="_blank" title="View Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Rational Function Hub"
+                                       data-image="project/rational-function-hub.png"
+                                       data-desc="An educational platform designed to simplify learning rational functions through interactive tools and visual analysis."
+                                       data-details="Interactive Graphing Tool with real-time plotting;Step-by-Step Analysis of asymptotes, zeros, and holes;Interactive Practice Quizzes and Problem-solving exercises;Integrated Educational Resources and Video Tutorials;"
+                                       data-tags="HTML,CSS,JavaScript,Plotly.js,Education"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/rational-function-hub.png" alt="Rational Function Hub">
+                        </div>
+                        <div class="project-info">
+                            <h3>Rational Function Hub</h3>
+                            <p>Educational website designed to help students understand rational functions through interactive content and visual graphs.</p>
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile App Projects (GitHub Only) -->
+                    <div class="project-card glass-card reveal" data-category="software">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/automataiccyber/q-now-mob-app-expo.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Q-Now Mobile App"
+                                       data-image="project/q-now-mob-app.png"
+                                       data-desc="A comprehensive mobile solution for patients to manage their wait times and book appointments remotely."
+                                       data-details="Remote Queue Joining from any location;Real-time Status Monitoring and arrival notifications;Instant Appointment Booking and rescheduling;Secure Profile Management and establishment discovery;"
+                                       data-tags="Java,Android SDK,Firebase,Mobile App"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/q-now-mob-app.png" alt="Q-Now Mobile">
+                        </div>
+                        <div class="project-info">
+                            <h3>Q-Now Mobile App</h3>
+                            <p>Mobile solution for patients to manage queue status and book appointments in real-time via Firebase.</p>
+                            <div class="tags">
+                                <span>Java</span>
+                                <span>Android SDK</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card reveal" data-category="software">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/automataiccyber/tierra-homes.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Tierra Homes"
+                                       data-image="project/tierra-homes.png"
+                                       data-desc="An AI-powered Philippine Real Estate mobile application for property exploration and market analytics."
+                                       data-details="AI-Powered Price Prediction for property values;Advanced Location Insights and market analytics;Property Customization and filtering tools;Modern Material Design user interface;"
+                                       data-tags="Java,Android SDK,AI,Real Estate"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/tierra-homes.png" alt="Tierra Homes">
+                        </div>
+                        <div class="project-info">
+                            <h3>Tierra Homes</h3>
+                            <p>AI-powered Android app for property exploration with price prediction and market analytics.</p>
+                            <div class="tags">
+                                <span>Java</span>
+                                <span>AI</span>
+                                <span>Android SDK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Projects -->
+                    <div class="project-card glass-card reveal" data-category="hardware">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Q-Now Health Gate"
+                                       data-image="project/q-now-health-gate.png"
+                                       data-desc="An automated health screening and access control system that verifies patient arrival as part of the Q-Now ecosystem."
+                                       data-details="Integrated RFID scanner for identity verification;LCD module for real-time status display;Input PIN module for secure secondary verification;Fully integrated with Q-Now Mobile and Web apps;"
+                                       data-tags="IoT,Hardware,ESP32,Security"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/q-now-health-gate.png" alt="Q-Now Health Gate">
+                        </div>
+                        <div class="project-info">
+                            <h3>Q-Now Health Gate</h3>
+                            <p>Automated screening system with RFID and LCD verification, fully integrated into the Q-Now patient flow.</p>
+                            <div class="tags">
+                                <span>IoT</span>
+                                <span>Hardware</span>
+                                <span>ESP32</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card reveal" data-category="hardware">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Flexi-Board"
+                                       data-image="project/flexi-board.png"
+                                       data-desc="An intelligent interactive dashboard that responds to user presence and voice commands for efficient school information management."
+                                       data-details="PIR Motion Sensor to detect user proximity and auto-wake the screen;Integrated Microphone for advanced voice command navigation;Real-time information display for announcements and facility status;Energy-efficient design with automatic power management;"
+                                       data-tags="IoT,ESP32,Voice Control,PIR"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/flexi-board.png" alt="Flexi-Board">
+                        </div>
+                        <div class="project-info">
+                            <h3>Flexi-Board</h3>
+                            <p>Interactive dashboard with PIR proximity detection and integrated voice command support.</p>
+                            <div class="tags">
+                                <span>IoT</span>
+                                <span>ESP32</span>
+                                <span>Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card reveal" data-category="hardware">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="javascript:void(0)" class="open-info" 
+                                       data-title="Thermo-Shift"
+                                       data-image="project/thermo-shift.png"
+                                       data-desc="An advanced smart tumbler capable of detecting water temperature and actively regulating it using a chemical heating/cooling mechanism."
+                                       data-details="Precision Water Sensor for real-time hot and cold temperature detection;Chemical-based thermal module at the bottom for active regulation;Smart status indicator for current beverage state;Portable and durable design for everyday use;"
+                                       data-tags="IoT,Sensors,Hardware,Smart Tech"
+                                       title="View Info"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </div>
+                            <img src="project/thermo-shift.png" alt="Thermo-Shift">
+                        </div>
+                        <div class="project-info">
+                            <h3>Thermo-Shift</h3>
+                            <p>Smart tumbler with temperature sensors and an integrated chemical thermal regulation system.</p>
+                            <div class="tags">
+                                <span>IoT</span>
+                                <span>Sensors</span>
+                                <span>Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Technical Skills</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category glass-card reveal">
+                        <h3>Development</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="95%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>JavaScript (Vanilla)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Java (Android)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3>Networking & Security</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Network Troubleshooting</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Endpoint & Network Security</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Ethical Hacking</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3>IoT & Emerging Tech</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>IoT Fundamentals (ESP32)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Firebase Cloud Services</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>AI Fundamentals</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress" style="width: 0%" data-width="80%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certs" class="certs-section reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Certifications</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="certs-slider">
+                    <div class="certs-grid">
+                        <!-- TOP 6 CERTIFICATES -->
+                        <!-- Junior Cybersecurity Analyst Career Path -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Junior Cybersecurity Analyst Career Path"
+                               data-image="creds/Junior Cybersecurity Analyst Career Path.png"
+                               data-desc="Prepares for an entry-level role as a cybersecurity analyst."
+                               data-details="Threat detection;Security monitoring;Incident response basics;Security policy implementation;Issued: Jan 2026;"
+                               data-tags="Cybersecurity,Analyst,Cisco"
+                               title="View Info">
+                                <img src="creds/Junior Cybersecurity Analyst Career Path.png" alt="Junior Cybersecurity Analyst">
+                                <h4>Junior Cyber Analyst Path</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Network Technician Career Path -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Network Technician Career Path"
+                               data-image="creds/Network Technician Career Path.png"
+                               data-desc="Comprehensive training for entry-level network technicians focusing on networking fundamentals."
+                               data-details="Cloud Services;Ethernet technologies;Network Troubleshooting;Network configuration;Issued: Jan 2026;"
+                               data-tags="Networking,Technician,Cisco"
+                               title="View Info">
+                                <img src="creds/Network Technician Career Path.png" alt="Network Technician">
+                                <h4>Network Technician Path</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Introduction to IoT -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Introduction to IoT"
+                               data-image="creds/Introduction to IoT.png"
+                               data-desc="Fundamental concepts of the Internet of Things and its impact on various industries."
+                               data-details="IoT ecosystem overview;Data collection and analysis;Security in IoT;Business opportunities in IoT;Issued: Jan 2026;"
+                               data-tags="IoT,Basics,Cisco"
+                               title="View Info">
+                                <img src="creds/Introduction to IoT.png" alt="Introduction to IoT">
+                                <h4>Introduction to IoT</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Azure AI Fundamentals (TESDA) -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Microsoft AI Course (Azure AI Fundamentals)"
+                               data-image="creds/Microsoft Artificial Intelligence Course (Azure AI Fundamentals).png"
+                               data-desc="Microsoft Azure-based AI services and implementation."
+                               data-details="Artificial Intelligence (AI);Microsoft Azure;Machine Learning;Cognitive Services;Issued: Jun 2025;"
+                               data-tags="AI,Azure,TESDA"
+                               title="View Info">
+                                <img src="creds/Microsoft Artificial Intelligence Course (Azure AI Fundamentals).png" alt="Azure AI Fundamentals TESDA">
+                                <h4>Azure AI Fundamentals</h4>
+                                <p>TESDA/Microsoft | Jun 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Power BI (Exodus Experts) -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Analyzing and Visualizing Data with Microsoft Power BI"
+                               data-image="creds/Analyzing and Visualizing Data with Microsoft Power BI.png"
+                               data-desc="Data analysis and visualization using Power BI."
+                               data-details="Data Analysis;Data Visualization;Interpreting Data;DAX;Issued: Feb 2025;"
+                               data-tags="Data,Power BI,Exodus Experts"
+                               title="View Info">
+                                <img src="creds/Analyzing and Visualizing Data with Microsoft Power BI.png" alt="Power BI Exodus Experts">
+                                <h4>Data Analysis with Power BI</h4>
+                                <p>Exodus Experts | Feb 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- OPSWAT ICIP -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Introduction to Critical Infrastructure Protection (ICIP)"
+                               data-image="creds/OPSWAT Introduction to Critical Infrastructure Protection (ICIP).png"
+                               data-desc="Security measures for protecting vital national infrastructure."
+                               data-details="Risk management;Asset protection;Compliance standards;Threat landscapes;Issued: Aug 2025;"
+                               data-tags="Infrastructure,Security,OPSWAT"
+                               title="View Info">
+                                <img src="creds/OPSWAT Introduction to Critical Infrastructure Protection (ICIP).png" alt="OPSWAT ICIP">
+                                <h4>Critical Infrastructure Protection</h4>
+                                <p>OPSWAT | Aug 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- REMAINING CERTIFICATES BY DATE (DESCENDING) -->
+                        <!-- IT Customer Support Basics -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="IT Customer Support Basics"
+                               data-image="creds/IT Customer Support Basics.png"
+                               data-desc="Covers the foundational skills required for effective IT customer support and service management."
+                               data-details="Customer service principles;Problem-solving techniques;Communication skills in IT;Support desk operations;Issued: Feb 2026;"
+                               data-tags="Support,IT,Cisco"
+                               title="View Info">
+                                <img src="creds/IT Customer Support Basics.png" alt="IT Customer Support Basics">
+                                <h4>IT Customer Support Basics</h4>
+                                <p>Cisco | Feb 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Industrial IoT - Manufacturing -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Industrial IoT and Control Systems in Manufacturing"
+                               data-image="creds/Industrial IoT and Control Systems in Manufacturing.png"
+                               data-desc="Explores the integration of IoT technologies and control systems within the manufacturing sector."
+                               data-details="Industrial IoT architecture;Control system security;Manufacturing process automation;Smart factory concepts;Issued: Jan 2026;"
+                               data-tags="IIoT,Manufacturing,Cisco"
+                               title="View Info">
+                                <img src="creds/Industrial IoT and Control Systems in Manufacturing.png" alt="Industrial IoT Manufacturing">
+                                <h4>IIoT in Manufacturing</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Industrial IoT - Energy -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Industrial IoT and Control Systems in Energy"
+                               data-image="creds/Industrial IoT and Control Systems in Energy.png"
+                               data-desc="Focuses on the application of IoT and control systems in energy production and distribution."
+                               data-details="Energy sector IoT use cases;Grid automation;Security for energy infrastructure;Sustainability and IoT;Issued: Jan 2026;"
+                               data-tags="IIoT,Energy,Cisco"
+                               title="View Info">
+                                <img src="creds/Industrial IoT and Control Systems in Energy.png" alt="Industrial IoT Energy">
+                                <h4>IIoT in Energy</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Network Support and Security -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Network Support and Security"
+                               data-image="creds/Network Support and Security.png"
+                               data-desc="Covers essential skills for supporting and securing network environments."
+                               data-details="Endpoint Devices management;Help Desk Support;Network Troubleshooting;Basic security measures;Issued: Jan 2026;"
+                               data-tags="Networking,Security,Cisco"
+                               title="View Info">
+                                <img src="creds/Network Support and Security.png" alt="Network Support and Security">
+                                <h4>Network Support & Security</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Network Addressing and Basic Troubleshooting -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Network Addressing and Basic Troubleshooting"
+                               data-image="creds/Network Addressing and Basic Troubleshooting.png"
+                               data-desc="Focuses on IP addressing schemes and fundamental network troubleshooting techniques."
+                               data-details="IPv4 and IPv6 addressing;Subnetting;Basic connectivity testing;Network diagnostic tools;Issued: Jan 2026;"
+                               data-tags="Networking,Troubleshooting,Cisco"
+                               title="View Info">
+                                <img src="creds/Network Addressing and Basic Troubleshooting.png" alt="Network Addressing">
+                                <h4>Network Addressing</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Cyber Threat Management -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Cyber Threat Management"
+                               data-image="creds/Cyber Threat Management.png"
+                               data-desc="Advanced strategies for managing and mitigating cybersecurity threats."
+                               data-details="Threat intelligence;Vulnerability management;Risk assessment;Security operations;Issued: Jan 2026;"
+                               data-tags="Cybersecurity,Threat Management,Cisco"
+                               title="View Info">
+                                <img src="creds/Cyber Threat Management.png" alt="Cyber Threat Management">
+                                <h4>Cyber Threat Management</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Network Defense -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Network Defense"
+                               data-image="creds/Network Defense.png"
+                               data-desc="Methods and tools for defending network infrastructure."
+                               data-details="Firewall configuration;Intrusion prevention;VPN technologies;Network monitoring;Issued: Jan 2026;"
+                               data-tags="Networking,Security,Cisco"
+                               title="View Info">
+                                <img src="creds/Network Defense.png" alt="Network Defense">
+                                <h4>Network Defense</h4>
+                                <p>Cisco | Jan 2026</p>
+                            </a>
+                        </div>
+
+                        <!-- Endpoint Security -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Endpoint Security"
+                               data-image="creds/Endpoint Security.png"
+                               data-desc="Protecting end-user devices and data from security threats."
+                               data-details="Malware protection;Endpoint detection and response;Access control;Security auditing;Issued: Dec 2025;"
+                               data-tags="Cybersecurity,Endpoint,Cisco"
+                               title="View Info">
+                                <img src="creds/Endpoint Security.png" alt="Endpoint Security">
+                                <h4>Endpoint Security</h4>
+                                <p>Cisco | Dec 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Networking Devices and Initial Configuration -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Networking Devices and Initial Configuration"
+                               data-image="creds/Networking Devices and Initial Configuration.png"
+                               data-desc="Hands-on skills for configuring network devices."
+                               data-details="Router and switch configuration;Initial setup procedures;CLI basics;Network connectivity verification;Issued: Dec 2025;"
+                               data-tags="Networking,Configuration,Cisco"
+                               title="View Info">
+                                <img src="creds/Networking Devices and Initial Configuration.png" alt="Networking Devices">
+                                <h4>Networking Devices & Config</h4>
+                                <p>Cisco | Dec 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Networking Basics -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Networking Basics"
+                               data-image="creds/Networking Basics.png"
+                               data-desc="Foundational knowledge of networking protocols and concepts."
+                               data-details="OSI model;TCP/IP stack;Basic hardware;Network topologies;Issued: Oct 2025;"
+                               data-tags="Networking,Basics,Cisco"
+                               title="View Info">
+                                <img src="creds/Networking Basics.png" alt="Networking Basics">
+                                <h4>Networking Basics</h4>
+                                <p>Cisco | Oct 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Ethical Hacker -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Ethical Hacker"
+                               data-image="creds/Ethical Hacker.png"
+                               data-desc="Offensive security techniques for identifying system vulnerabilities."
+                               data-details="Penetration testing;Vulnerability scanning;Reconnaissance;Exploitation basics;Issued: Jul 2025;"
+                               data-tags="Cybersecurity,Hacking,Cisco"
+                               title="View Info">
+                                <img src="creds/Ethical Hacker.png" alt="Ethical Hacker">
+                                <h4>Ethical Hacker</h4>
+                                <p>Cisco | Jul 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- AI Fundamentals (IBM) -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Artificial Intelligence Fundamentals"
+                               data-image="creds/Artificial Intelligence Fundamentals.png"
+                               data-desc="Foundational AI and Machine Learning concepts."
+                               data-details="Artificial Intelligence (AI);Machine Learning;Neural networks;AI Ethics;Issued: Jul 2025;"
+                               data-tags="AI,Machine Learning,IBM"
+                               title="View Info">
+                                <img src="creds/Artificial Intelligence Fundamentals.png" alt="AI Fundamentals IBM">
+                                <h4>AI Fundamentals</h4>
+                                <p>IBM | Jul 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Azure AI Document Intelligence -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Fundamentals of Azure AI Document Intelligence"
+                               data-image="creds/Fundamentals of Azure AI Document Intelligence.png"
+                               data-desc="Automating data extraction from documents using AI."
+                               data-details="Artificial Intelligence (AI);Machine Learning;Document processing;OCR technology;Issued: Jun 2025;"
+                               data-tags="AI,Document Intelligence,Microsoft"
+                               title="View Info">
+                                <img src="creds/Fundamentals of Azure AI Document Intelligence.png" alt="Azure AI Document Intelligence">
+                                <h4>Azure AI Document Intelligence</h4>
+                                <p>Microsoft | Jun 2025</p>
+                            </a>
+                        </div>
+
+                        <!-- Introduction to Cybersecurity -->
+                        <div class="cert-card glass-card reveal">
+                            <a href="javascript:void(0)" class="open-info" 
+                               data-title="Introduction to Cybersecurity"
+                               data-image="creds/Introduction to Cybersecurity.png"
+                               data-desc="Fundamental concepts of cybersecurity protection."
+                               data-details="Threat Detection;Network Security;Cybersecurity;Data Privacy Awareness;Issued: Dec 2024;"
+                               data-tags="Cybersecurity,Basics,Cisco"
+                               title="View Info">
+                                <img src="creds/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
+                                <h4>Introduction to Cybersecurity</h4>
+                                <p>Cisco | Dec 2024</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="view-all-container">
+                        <button id="show-more-certs" class="btn btn-secondary">Show More Certifications <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <a href="mailto:lieldarrenfajutagana@gmail.com" class="contact-item glass-card reveal">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>lieldarrenfajutagana@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lieldarrenfajutagana" target="_blank" class="contact-item glass-card reveal">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>linkedin.com/in/lieldarrenfajutagana</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/automataiccyber" target="_blank" class="contact-item glass-card reveal">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p>github.com/automataiccyber</p>
+                            </div>
+                        </a>
+                    </div>
+                    <form class="contact-form glass-card reveal" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="0c8f4ef1-8317-47f7-b564-f18d0f1bfe59">
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <!-- Optional: Custom Subject and Confirmation -->
+                        <input type="hidden" name="subject" value="New Portfolio Message from Liel Darren Portfolio">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        
+                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top -->
+    <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <p>&copy; 2026 Liel Darren F. Fajutagana. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/automataiccyber" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lieldarrenfajutagana" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img id="modal-image" src="" alt="Project Image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Project Title</h2>
+                    <div id="modal-tags" class="tags"></div>
+                    <p id="modal-description">Project description goes here.</p>
+                    <div id="modal-details" class="modal-details-list">
+                        <!-- Details will be injected here -->
+                    </div>
+                    <div id="modal-actions" class="modal-actions">
+                        <a id="modal-verify-btn" href="https://www.linkedin.com/in/lieldarrenfajutagana" target="_blank" class="btn btn-primary" style="display: none;">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
