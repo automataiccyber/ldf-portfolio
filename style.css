@@ -17,18 +17,20 @@
     padding: 0;
     box-sizing: border-box;
     cursor: none; /* Custom cursor */
+    max-width: 100%;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
+html, body {
     background-color: var(--bg-dark);
     color: var(--text-light);
     font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
+    width: 100%;
 }
 
 h1, h2, h3, .logo {
@@ -74,6 +76,7 @@ h1, h2, h3, .logo {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    pointer-events: none;
 }
 
 #canvas-dots {
@@ -421,7 +424,7 @@ h1, h2, h3, .logo {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -916,6 +919,15 @@ h1, h2, h3, .logo {
     .hero-btns { flex-direction: column; }
     .projects-grid { grid-template-columns: 1fr; }
     .certs-grid { grid-template-columns: 1fr; }
+    
+    .contact-section { padding: 4rem 0; }
+    .contact-grid { gap: 2rem; }
+    .contact-item { padding: 1.5rem; }
+    .contact-item i { font-size: 1.2rem; }
+    .contact-item h3 { font-size: 0.9rem; }
+    .contact-item p { font-size: 0.8rem; overflow-wrap: break-word; word-break: break-all; }
+    
+    .section-title h2 { font-size: 2rem; }
 }
 
 /* --- Hide custom cursor on touch devices and small screens --- */
