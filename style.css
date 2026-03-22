@@ -25,7 +25,7 @@ html {
 }
 
 html, body {
-    background-color: var(--bg-dark);
+    background-color: transparent; /* Changed to transparent to show bg-container */
     color: var(--text-light);
     font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
@@ -77,14 +77,20 @@ h1, h2, h3, .logo {
     z-index: -1; /* Keep background behind everything */
     overflow: hidden;
     pointer-events: none;
+    background-color: #050510; /* Set background here instead of body */
 }
 
 #canvas-dots {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px, 80px 80px;
+    background-position: center center;
+    z-index: 2; /* On top of spheres */
 }
 
 .gradient-sphere {
@@ -92,14 +98,14 @@ h1, h2, h3, .logo {
     border-radius: 50%;
     filter: blur(120px); /* Increased blur for more "blurred designs" look */
     opacity: 0.8; /* Increased opacity from 0.6 for better visibility */
-    /* Removed z-index to stay visible over bg-container background */
+    z-index: 1; /* Explicitly set to 1 to stay on top of bg-container background */
     animation: float 25s infinite alternate; /* Slower, more subtle float */
 }
 
 .sphere-1 {
     width: 800px; /* Increased from 600px */
     height: 800px;
-    background: radial-gradient(circle, var(--accent-blue), transparent); /* Use gradient for softer edges */
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.4) 0%, transparent 70%); /* Explicitly using rgba for var(--accent-blue) */
     top: -200px;
     right: -200px;
 }
@@ -107,7 +113,7 @@ h1, h2, h3, .logo {
 .sphere-2 {
     width: 900px; /* Increased from 700px */
     height: 900px;
-    background: radial-gradient(circle, var(--accent-purple), transparent);
+    background: radial-gradient(circle, rgba(157, 80, 187, 0.3) 0%, transparent 70%); /* Explicitly using rgba for var(--accent-purple) */
     bottom: -300px;
     left: -300px;
 }
@@ -115,7 +121,7 @@ h1, h2, h3, .logo {
 .sphere-3 {
     width: 600px; /* Increased from 500px */
     height: 600px;
-    background: radial-gradient(circle, var(--accent-cyan), transparent);
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.3) 0%, transparent 70%); /* Explicitly using rgba for var(--accent-cyan) */
     top: 40%;
     left: 15%;
     animation-delay: -7s;
@@ -195,6 +201,11 @@ h1, h2, h3, .logo {
 
 .nav-links a:hover::after, .nav-links a.active::after {
     width: 100%;
+}
+
+main {
+    position: relative;
+    z-index: 1; /* Above bg-container */
 }
 
 /* --- Hero Section --- */
