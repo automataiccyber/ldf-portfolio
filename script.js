@@ -220,6 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const verifyBtn = document.getElementById('modal-verify-btn');
             if (btn.closest('#certs')) {
                 verifyBtn.style.display = 'inline-flex';
+                const verifyUrl = btn.getAttribute('data-verify');
+                if (verifyUrl) {
+                    verifyBtn.href = verifyUrl;
+                } else {
+                    verifyBtn.href = "https://www.linkedin.com/in/lieldarrenfajutagana";
+                }
             } else {
                 verifyBtn.style.display = 'none';
             }
@@ -371,14 +377,51 @@ document.addEventListener('DOMContentLoaded', () => {
             sphere.style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
         });
     });
+    // --- Dynamic Data Points in Background ---
+    function createDataPoints() {
+        const bgContainer = document.querySelector('.bg-container');
+        if (!bgContainer) return;
+        
+        for (let i = 0; i < 20; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'data-point';
+            const size = Math.random() * 4 + 2;
+            dot.style.width = size + 'px';
+            dot.style.height = size + 'px';
+            dot.style.left = Math.random() * 100 + '%';
+            dot.style.top = Math.random() * 100 + '%';
+            dot.style.animationDelay = Math.random() * 5 + 's';
+            dot.style.animationDuration = Math.random() * 3 + 2 + 's';
+            bgContainer.appendChild(dot);
+        }
+    }
+
+    createDataPoints();
 });
 
-// Keyframes for mobile nav fade
+// Keyframes for mobile nav fade and data points
 const style = document.createElement('style');
 style.textContent = `
     @keyframes navLinkFade {
         from { opacity: 0; transform: translateX(50px); }
         to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .data-point {
+        position: absolute;
+        background: var(--accent-cyan);
+        border-radius: 50%;
+        opacity: 0;
+        z-index: 1;
+        pointer-events: none;
+        box-shadow: 0 0 10px var(--accent-cyan);
+        animation: data-pulse linear infinite;
+    }
+
+    @keyframes data-pulse {
+        0% { opacity: 0; transform: scale(0.5); }
+        50% { opacity: 0.8; transform: scale(1.2); }
+        100% { opacity: 0; transform: scale(1.5); }
     }
     
     .nav-links.nav-active {
@@ -388,8 +431,9 @@ style.textContent = `
         right: 0px;
         height: 100vh;
         top: 0;
-        background: rgba(10, 11, 30, 0.98);
+        background: rgba(10, 11, 30, 0.85); /* Reduced opacity for better glass effect */
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px); /* Support for Safari */
         width: 25%; /* Cater 25% of the horizontal screen as requested */
         min-width: 200px; /* Reduced min-width to accommodate 25% better on small screens */
         align-items: center;
